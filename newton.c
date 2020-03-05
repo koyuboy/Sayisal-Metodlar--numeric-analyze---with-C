@@ -32,22 +32,20 @@ int main() {
 
 		iter++;
 
-		if (fabs(f_x_Sets[j]) == 0.0) {	// have a problem here.  program find root but continue to compute again and again(2 times)
+		if (fabs(f_x_Sets[j]) == 0.0) {	
 			printf("\n !! Root of Equation = %f !!\n\n", xSets[j]);
 			break;
 		}
 
 
-		if (j > 0) {	// this is perfectly work ;)
-			if (fabs(f_x_Sets[j] - f_x_Sets[j - 1]) <= 0.001) {
+		if (j > 0) {	
+			if (fabs(xSets[j] - xSets[j - 1]) <= 0.001) {
 				printf("\n !! Root Found  !!\n\n");
 				break;
 			}
 		}
 
 	}
-
-
 
 
 	printf("iter.	 x         f(x)\n");
